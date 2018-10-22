@@ -60,6 +60,12 @@ public class SalesCartItem {
 	public double getTotalDiscount() {
 		return totalDiscount;
 	}
+	
+	@Override 
+	public String toString() {
+		return (this.getItem().toString() + ", Quantity:"+this.getQuantity()+", Sale Amount:"+this.getSaleAmount()
+		+", Total Discount:"+this.getTotalDiscount()+", Net Amount:"+this.getNetAmount());
+	}
 
 	
 }

@@ -5,5 +5,6 @@ import vivriti.groceryapp.sales.domain.SalesCart;
 public interface Logger {
 	
 	public void logSales(SalesCart salesCart);
+	public void printSales();
 
 }

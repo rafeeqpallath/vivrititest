@@ -15,5 +15,25 @@ public class SimpleLogger implements Logger {
 		logOfSales.add(salesCart.getScItems());
 
 	}
+	@Override
+	public void printSales() {
+		
+		System.out.println("********Printing today's Sale********");
+		int count=0;
+		for (List<SalesCartItem> sale: logOfSales) {
+			count++;
+			System.out.println();
+			System.out.println("********Printing Sale No: "+count);
+			
+			for (SalesCartItem scItem : sale) {
+				
+				System.out.println(scItem.toString());
+				
+			}
+		}
+		System.out.println("********That's all the sales We have had today*******");
+		
+	}
+	
 
 }

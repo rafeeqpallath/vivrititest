@@ -38,11 +38,21 @@ public class App
  	
     	doSomeSales();
     	
-  	   System.out.println("*****Printing the Post sales Inventory Position***");
+  	   System.out.println("*****Printing the Post first sales Inventory Position***");
      	printInventory();
  	   System.out.println("*******Printing Completed *********");
     	
-    	return;  
+    	
+    	// another customer repeated the same purchase (strange!)
+    	doSomeSales();
+    	
+   	   System.out.println("*****Printing the Post second sales Inventory Position***");
+      	printInventory();
+  	   System.out.println("*******Printing Completed *********");    	
+
+  	   // now the day is over. Lets print the overall sales from the log
+  	   simpleLogger.printSales();
+    	return;
         
     }
     
